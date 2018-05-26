@@ -1,0 +1,170 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SistemaPedidos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+
+        public static List<Curso> cursos = new List<Curso>();
+
+        public static List<Turma> turmas = new List<Turma>();
+
+        public static List<Aluno> Aluno = new List<Aluno>();
+
+        public static List<Matricula> matricula = new List<Matricula>();
+
+        static void Main(string[] args)
+        {
+            int opcao = 0;
+
+            Aluno.Add(new Aluno(10, "Rui Alves", 1978));
+            Aluno.Add(new Aluno(11, "Miguel Antonio", 1986));
+            Aluno.Add(new Aluno(12, "Sofia Miguel", 2002));
+
+            //ProdutoLista.Sort();
+
+
+            Curso c1 = new Curso(1001,"MVC",240, 400);
+            Curso c2 = new Curso(1002, "SQL", 150, 350);
+
+            Turma t1 = new Turma(101, 1, 2019, 20, c1);
+            c1.addTurma(t1);
+
+            Turma t2 = new Turma(102, 1, 2018, 15, c2);
+            c2.addTurma(t2);
+
+            cursos.Add(c1);
+            cursos.Add(c2);
+            turmas.Add(t1);
+            turmas.Add(t2);
+
+
+
+            while (opcao != 9)
+            {
+                Console.Clear();
+                Tela.Menu();
+                try
+                {
+                    opcao = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Erro inesperado: " + e.Message);
+                    opcao = 0;
+                }
+                Console.WriteLine();
+
+                if (opcao == 1)
+                {
+                    Tela.mostrarCursos();
+                }
+                else if (opcao == 2)
+                {
+                    Tela.MostrarTurmas();
+                }
+                else if (opcao == 3)
+                {
+                    try
+                    {
+                        Tela.registarAluno();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 4)
+                {
+                    try
+                    {
+                        Tela.mostrarAlunos();
+                    }
+                    catch (ModelExpecetion e)
+                    {
+                        Console.WriteLine("Erro de negócio: " + e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 5)
+                {
+                    try
+                    {
+                        Tela.RegistarMatriculas();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 6)
+                {
+                    try
+                    {
+                        Tela.mostrarMatriculas();
+                    }
+                    catch (ModelExpecetion e)
+                    {
+                        Console.WriteLine("Erro de negócio: " + e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 7)
+                {
+                    try
+                    {
+                        Tela.RegistarNotas();
+                    }
+                    catch (ModelExpecetion e)
+                    {
+                        Console.WriteLine("Erro de negócio: " + e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 8)
+                {
+                    try
+                    {
+                        Tela.mostrarNotas();
+                    }
+                    catch (ModelExpecetion e)
+                    {
+                        Console.WriteLine("Erro de negócio: " + e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 9)
+                {
+                    Console.WriteLine("Fim do programa!");
+                }
+                else
+                {
+                    Console.WriteLine("Opção inválida!");
+                    Console.WriteLine();
+                }
+                Console.ReadLine();
+            }
+        }
+    }
+}

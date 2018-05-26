@@ -1,0 +1,6 @@
+C:\Users\rui.alves\Documents\Visual Studio 2013\Projects\CursoPOO\SistemaPedidos\bin\Debug\SistemaPedidos.exe.config
+C:\Users\rui.alves\Documents\Visual Studio 2013\Projects\CursoPOO\SistemaPedidos\bin\Debug\SistemaPedidos.exe
+C:\Users\rui.alves\Documents\Visual Studio 2013\Projects\CursoPOO\SistemaPedidos\bin\Debug\SistemaPedidos.pdb
+C:\Users\rui.alves\Documents\Visual Studio 2013\Projects\CursoPOO\SistemaPedidos\obj\Debug\SistemaPedidos.exe
+C:\Users\rui.alves\Documents\Visual Studio 2013\Projects\CursoPOO\SistemaPedidos\obj\Debug\SistemaPedidos.pdb
+C:\Users\rui.alves\Documents\Visual Studio 2013\Projects\CursoPOO\SistemaPedidos\obj\Debug\SistemaPedidos.csprojResolveAssemblyReference.cache
