@@ -143,11 +143,11 @@ namespace SistemaPedidos
                     pedido.itens.Add(itemPedido);
 
 
-                    Console.Write("Pagamento será feito em cartão ou referência (c/r)? ");
+                    Console.Write("Pagamento será feito em cartão ou referência (C/R)? ");
                     char ch = char.Parse(Console.ReadLine());
                     if (ch == 'c')
                     {
-                        Console.Write("Parcela ");
+                        Console.Write("Referência ");
                         int parcela = int.Parse(Console.ReadLine());
 
 
